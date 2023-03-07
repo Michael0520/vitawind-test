@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIM WebSite</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="home">
+      <!-- navbar -->
+      <%- include('navbar/navbar.html') %>
+
+      <!-- banner -->
+      <section class="home-banner">
+        <h1>
+          <span>THE</span>
+          <span>WIDEST</span>
+        </h1>
+      </section>
+
+      <!-- promotion -->
+      <%- include('promotion/promotion.html') %>
+
+      <!-- who we are -->
+      <section id="home-video" class="home-video">
+        <!-- content -->
+        <div class="home-video_content-wrapper">
+          <h1>Who are we?</h1>
+          <p class="desktop">
+            DIM is one-stop-service place of advertising to offer digital
+            networks and platforms. With hundreds of digital media all over
+            Indonesia, from stations to government buildings, DIM Media will be
+            the solution for your needs.
+          </p>
+          <p class="tablet">
+            DIM is a digital media that delivers a network platform for clients.
+            DIM media through digital network, clients can advertise in various
+            locations with the target market in Indonesia.
+          </p>
+          <button type="button">
+            <span>Learn more</span>
+          </button>
+        </div>
+        <!-- video -->
+        <div class="home-video_video-wrapper">
+          <video
+            src="/videos/who-are-we.mp4"
+            playsinline
+            poster="/images/home/video-poster.png"
+          ></video>
+          <button type="button" class="videoBtn">
+            <img src="/images/home/video-playBtn.png" alt="video-play-button" />
+          </button>
+        </div>
+        <!-- dialog -->
+        <div class="home-video_dialog-container" id="home-video_dialog">
+          <div class="home-video_dialog-container_dialog">
+            <button class="home-video_dialog-container_dialog_close-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <div class="home-video_dialog-container_dialog_dialog-content">
+              <video id="videoPlayer" controls></video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- product spec -->
+      <section id="home-product" class="home-product">
+        <div class="home-product_wrapper">
+          <!-- indoor -->
+          <div class="home-product_indoor-wrapper">
+            <div class="home-product_wrapper_mask"></div>
+            <p class="home-product_indoor-wrapper_number-text">01</p>
+            <div class="home-product_indoor-wrapper_content-wrapper">
+              <p class="home-product_indoor-wrapper_content-wrapper_type-text">
+                INDOOR
+              </p>
+              <p class="home-product_indoor-wrapper_content-wrapper_media-text">
+                I-Media
+              </p>
+              <p
+                class="home-product_indoor-wrapper_content-wrapper_specification-text cursor-pointer"
+              >
+                Check specification
+              </p>
+            </div>
+            <div class="home-product_indoor-wrapper_image-wrapper">
+              <div
+                class="home-product_indoor-wrapper_image-wrapper_product-image"
+              ></div>
+              <div
+                class="home-product_indoor-wrapper_image-wrapper_icon-group"
+              ></div>
+            </div>
+
+            <!-- indoor popup -->
+            <div class="home-product_indoor-wrapper_popup">
+              <h3>I-Media (Indoor)</h3>
+              <ul>
+                <li>
+                  <span>Using Screen Size: </span>
+                  <span>43"</span>
+                </li>
+                <li>
+                  <span>Brightness: </span>
+                  <span>100 nits</span>
+                </li>
+                <li>
+                  <span>Top Screen Resolution :</span>
+                  <span>1920 x 1080 </span>
+                </li>
+                <li>
+                  <span>Screen Resolution Down : </span>
+                  <span>1080 x 1920</span>
+                </li>
+              </ul>
+              <button
+                class="home-product_indoor-wrapper_popup_closeBtn"
+              ></button>
+            </div>
+          </div>
+          <!-- outdoor -->
+          <div class="home-product_outdoor-wrapper">
+            <div class="home-product_wrapper_mask"></div>
+            <p class="home-product_outdoor-wrapper_number-text">02</p>
+            <div class="home-product_outdoor-wrapper_content-wrapper">
+              <p class="home-product_outdoor-wrapper_content-wrapper_type-text">
+                OUTDOOR
+              </p>
+              <p
+                class="home-product_outdoor-wrapper_content-wrapper_media-text"
+              >
+                Videotron
+              </p>
+              <p
+                class="home-product_outdoor-wrapper_content-wrapper_specification-text"
+              >
+                Check specification
+              </p>
+            </div>
+            <div class="home-product_outdoor-wrapper_image-wrapper">
+              <div
+                class="home-product_outdoor-wrapper_image-wrapper_product-image"
+              ></div>
+              <div
+                class="home-product_outdoor-wrapper_image-wrapper_icon-group"
+              ></div>
+            </div>
+
+            <!-- outdoor popup -->
+            <div class="home-product_outdoor-wrapper_popup">
+              <h3>Videotron (Outdoor)</h3>
+              <ul>
+                <li>
+                  <span>Using: </span>
+                  <span>Nichia SMD P10 module</span>
+                </li>
+                <li>
+                  <span>Brightness: </span>
+                  <span>7000 Nits</span>
+                </li>
+                <li>
+                  <span>Top Screen Resolution :</span>
+                  <span>3 x 1.5 meters </span>
+                </li>
+                <li>
+                  <span>Screen Resolution Down : </span>
+                  <span>Full HD</span>
+                </li>
+              </ul>
+              <button
+                class="home-product_outdoor-wrapper_popup_closeBtn"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- converage -->
+      <%- include('converage/converage.html') %>
+
+      <!-- location -->
+      <%- include('location/location.html') %>
+
+      <!-- partner -->
+      <%- include('partner/partner.html') %>
+
+      <!-- footer -->
+      <%- include('footer/footer.html') %>
+
+      <!-- whats App -->
+      <div class="whatsApp">
+        <img src="/images/icon/whatsApp-icon.png" alt="whatsApp" />
+      </div>
+    </div>
+
+    <script type="module" src="./src/assets/script/compontents.js"></script>
+    <script type="module" src="./src/assets/script/home.js"></script>
+  </body>
+</html>

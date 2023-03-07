@@ -1,0 +1,175 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: $color-black;
+  @include desktop {
+    max-width: vwL(1440);
+  }
+  @include tablet {
+    max-width: vwM(768);
+  }
+  @include mobile {
+    max-width: vw(375);
+  }
+  &_banner {
+    width: 100%;
+    height: 526px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-black url("/images/about/about-banner.png") center
+      no-repeat;
+    background-size: cover;
+    @include desktop {
+      height: vwL(526);
+    }
+    @include tablet {
+      height: vwM(392);
+    }
+    @include mobile {
+      height: vw(233);
+    }
+    h1 {
+      font-size: 32px;
+      letter-spacing: 16px;
+      color: $color-red;
+      @include desktop {
+        font-size: vwL(32);
+        letter-spacing: vwL(16);
+      }
+      @include tablet {
+        font-size: vwM(32);
+        letter-spacing: vwM(16);
+      }
+      @include mobile {
+        font-size: vw(16);
+        letter-spacing: vw(8);
+      }
+    }
+  }
+  &_content {
+    width: 100%;
+    background-color: $color-white;
+    padding: 80px;
+    @include desktop {
+      padding: vwL(80);
+    }
+    @include tablet {
+      padding: vwM(60);
+    }
+    @include mobile {
+      padding: vw(40) vw(30);
+    }
+    &_paragraph {
+      text-align: center;
+      color: $color-black;
+      font-weight: 300;
+      font-size: 25px;
+      margin-bottom: 60px;
+      @include desktop {
+        font-size: vwL(25);
+        margin-bottom: vwL(60);
+      }
+      @include tablet {
+        font-size: vwM(25);
+        margin-bottom: vwM(60);
+      }
+      @include mobile {
+        font-size: vw(16);
+        margin-bottom: vw(30);
+      }
+    }
+    &_card-wrapper {
+      width: 100%;
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      align-items: flex-start;
+      @include desktop {
+        gap: vwL(36);
+      }
+      @include tablet {
+        flex-direction: column;
+        gap: vwM(36);
+      }
+      @include mobile {
+        gap: vw(18);
+      }
+      &_card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include desktop {
+          gap: vwL(20);
+        }
+        @include tablet {
+          gap: vwM(40);
+        }
+        &_image-wrapper {
+          padding: 0 36px;
+          @include desktop {
+            padding: 0 vwL(36);
+          }
+          @include tablet {
+            padding: 0 vwM(120);
+          }
+          @include mobile {
+            padding: 0 vw(30);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        &_content {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          @include desktop {
+            gap: vwL(8);
+          }
+          @include tablet {
+            gap: vwM(8);
+          }
+          @include mobile {
+            gap: vw(8);
+          }
+          color: $color-black;
+          h3 {
+            font-weight: 700;
+            font-size: 25px;
+            @include desktop {
+              font-size: vwL(25);
+            }
+            @include tablet {
+              font-size: vwM(32);
+            }
+            @include mobile {
+              font-size: vw(20);
+            }
+          }
+          p {
+            font-weight: 300;
+            font-size: 25px;
+            @include desktop {
+              font-size: vwL(25);
+            }
+            @include tablet {
+              font-size: vwM(25);
+            }
+            @include mobile {
+              font-size: vw(16);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indoor Detail Page</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="indoorDetail" class="indoorDetail">
+      <!-- nav-bar -->
+      <%- include('navbar/navbar.html') %>
+
+      <!-- banner -->
+      <div class="indoorDetail_banner">
+        <div class="indoorDetail_banner_title-group">
+          <div class="indoorDetail_banner_title-group_triangle"></div>
+          <h1>Station</h1>
+        </div>
+        <div class="indoorDetail_banner_link-group">
+          <img src="/images/detail/detail_chevron-left.png" alt="" />
+          <a href="/dim-website/indoor.html">Go to outdoor main page</a>
+        </div>
+      </div>
+
+      <!-- video -->
+      <div class="indoorDetail_video-wrapper">
+        <video src="/videos/who-are-we.mp4" autoplay></video>
+        <div class="indoorDetail_video-wrapper_triangle-frame"></div>
+        <div class="indoorDetail_video-wrapper_vertical-box"></div>
+      </div>
+      <!-- video dialog -->
+      <div class="indoorDetail_dialog-container" id="indoorDetail-video_dialog">
+        <div class="indoorDetail_dialog-container_dialog">
+          <button class="indoorDetail_dialog-container_dialog_close-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <div class="indoorDetail_dialog-container_dialog_dialog-content">
+            <video
+              id="videoPlayer"
+              playsinline
+              poster="/images/home/video-poster.png"
+            ></video>
+          </div>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="indoorDetail_paragraph">
+        <p>
+          DIM Media commits to bringing your advertising to another level. We
+          keep improvising our services and product. With a target more than 500
+          LEDs all over Indonesia, your advertising will reach more broad
+          audience. Our LEDs use Nichia SMD LED to guarantee the quality of your
+          advertising.
+        </p>
+      </div>
+
+      <!-- screen-capture & swiper -->
+      <div class="indoorDetail_screen-capture">
+        <h1>
+          <span> Screen capture from </span>
+          <span> Cibinong </span>
+        </h1>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- slide-item -->
+            <div class="swiper-slide">
+              <img
+                src="/images/detail/indoorDetail/indoorDetail_swiper01.png"
+                alt="swiper-item"
+              />
+              <p>Bekasi</p>
+            </div>
+            <!-- slide-item -->
+            <div class="swiper-slide">
+              <img
+                src="/images/detail/indoorDetail/indoorDetail_swiper01.png"
+                alt="swiper-item"
+              />
+              <p>Bekasi</p>
+            </div>
+            <!-- slide-item -->
+            <div class="swiper-slide">
+              <img
+                src="/images/detail/indoorDetail/indoorDetail_swiper01.png"
+                alt="swiper-item"
+              />
+              <p>Bekasi</p>
+            </div>
+          </div>
+          <!-- button -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <a href="#contact-us">
+          <span> Contact us </span>
+        </a>
+      </div>
+
+      <!-- Dialog -->
+      <div id="myDialog" class="dialog">
+        <div class="dialog_content">
+          <img id="dialog-image" src="" alt="screen-capture-image" />
+          <p id="dialog-text"></p>
+        </div>
+      </div>
+
+      <!-- location -->
+      <div class="indoorDetail_location">
+        <div class="indoorDetail_location_wrapper">
+          <h1>
+            <span>Other location from</span>
+            <span>indoor</span>
+          </h1>
+          <!-- tabs -->
+          <div class="indoorDetail_location_wrapper_tabs">
+            <!-- indoor -->
+            <div class="indoorDetail_location_wrapper_tabs_content">
+              <div
+                class="indoorDetail_location_wrapper_tabs_content_indoor-card-wrapper"
+              >
+                <!-- indoor-card -->
+                <div
+                  class="indoorDetail_location_wrapper_tabs_content_indoor-card-wrapper_indoor-card-column"
+                >
+                  <div
+                    class="indoorDetail_location_wrapper_tabs_content_indoor-card-wrapper_indoor-card-column_indoor-card"
+                  >
+                    <img
+                      src="/images/location/indoor/station.png"
+                      alt="station"
+                    />
+                    <p>STATION</p>
+                    <a href="/dim-website/indoorDetail.html">See space</a>
+                  </div>
+                </div>
+                <!-- indoor-card -->
+                <div
+                  class="indoorDetail_location_wrapper_tabs_content_indoor-card-wrapper_indoor-card-column"
+                >
+                  <div
+                    class="indoorDetail_location_wrapper_tabs_content_indoor-card-wrapper_indoor-card-column_indoor-card"
+                  >
+                    <img
+                      src="/images/location/indoor/station.png"
+                      alt="station"
+                    />
+                    <p>STATION</p>
+                    <a href="/dim-website/indoorDetail.html">See space</a>
+                  </div>
+                </div>
+                <!-- indoor-card -->
+                <div
+                  class="indoorDetail_location_wrapper_tabs_content_indoor-card-wrapper_indoor-card-column"
+                >
+                  <div
+                    class="indoorDetail_location_wrapper_tabs_content_indoor-card-wrapper_indoor-card-column_indoor-card"
+                  >
+                    <img
+                      src="/images/location/indoor/station.png"
+                      alt="station"
+                    />
+                    <p>STATION</p>
+                    <a href="/dim-website/indoorDetail.html">See space</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <%- include('footer/footer.html') %>
+    </div>
+
+    <script type="module" src="./src/assets/script/compontents.js"></script>
+    <script type="module" src="./src/assets/script/indoorDetail.js"></script>
+  </body>
+</html>

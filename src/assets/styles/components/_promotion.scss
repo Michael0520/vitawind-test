@@ -1,0 +1,226 @@
+.promotion {
+  width: 100%;
+  background-color: $color-white;
+  color: $color-black;
+  padding: 70px 0px 88px 80px;
+  @include desktop {
+    padding: vwL(70) 0 vwL(88) vwL(80);
+  }
+  @include tablet {
+    padding: vwM(70) 0px vwM(88) vwM(60);
+  }
+  @include mobile {
+    padding: vw(20) 0px vw(48) vw(30);
+  }
+  &_wrapper {
+    &_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 80px;
+      @include desktop {
+        padding-right: vwL(80);
+      }
+      @include tablet {
+        padding-right: 0;
+      }
+
+      h1 {
+        font-size: 50px;
+        font-weight: 700;
+        -moz-text-align-last: left;
+        text-align-last: left;
+        @include desktop {
+          font-size: vwL(50);
+        }
+        @include tablet {
+          margin-bottom: vwM(20);
+          font-size: vwM(50);
+        }
+        @include mobile {
+          margin-bottom: vw(20);
+          font-size: vw(25);
+        }
+      }
+      .desktop-button {
+        max-width: 1280px;
+        text-align: center;
+        display: block;
+        @include desktop {
+          max-width: vwL(1280);
+        }
+        @include tablet {
+          display: none;
+        }
+        &_wrapper {
+          display: flex;
+          gap: 16px;
+          overflow: hidden;
+          @include desktop {
+            gap: vwL(16);
+          }
+
+          button {
+            border-radius: 10px;
+            background-color: $color-black;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include desktop {
+              width: vwL(50);
+              height: vwL(50);
+            }
+            svg {
+              height: 20px;
+              width: 20px;
+              @include desktop {
+                height: vwL(20);
+                width: vwL(20);
+              }
+            }
+            &.next-button {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    &_content {
+      margin: 0 auto;
+      position: relative;
+      &_gridColumn {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        &_span {
+          grid-column: span 2 / span 2;
+        }
+        .swiper-slide {
+          position: relative;
+          border-radius: 10px;
+          -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3) !important;
+          border-radius: 10px;
+          overflow: hidden;
+          margin: 12px 1px;
+
+          
+          @include desktop {
+            margin: vwL(12) vwL(1);
+          }
+          @include tablet{
+            margin: vwM(12) vwM(2);
+          }
+          @include mobile{
+            margin: vw(6) vw(1);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: contain;
+            -o-object-fit: contain;
+            object-fit: contain;
+          }
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            bottom: 31px;
+            left: 31px;
+
+            width: 154px;
+            height: 52px;
+
+            background-color: $color-white;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+            background: url("/images/promotion/seeMore-btn.png") center
+              no-repeat;
+            background-size: cover;
+
+            @include desktop {
+              bottom: vwL(31);
+              left: vwL(31);
+              width: vwL(154);
+              height: vwL(52);
+            }
+            @include tablet {
+              bottom: vw(16);
+              left: vwM(22);
+              width: 103px;
+              height: 35px;
+            }
+            @include mobile {
+              background: url("/images/promotion/promotion-btn.png") center
+                no-repeat;
+              bottom: vw(10);
+              left: vw(12);
+              width: vw(98);
+              height: vw(40);
+              background-size: cover;
+            }
+          }
+        }
+      }
+      &_tablet-button {
+        display: none;
+        @include tablet {
+          display: block;
+        }
+        &_wrapper {
+          button {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-white;
+            border-radius: 50%;
+            z-index: 20;
+            width: vwM(70);
+            height: vwM(70);
+            top: 50%;
+            transform: translateY(-50%);
+            @include mobile {
+              width: vw(40);
+              height: vw(40);
+            }
+            svg {
+              width: vwM(10);
+              height: vwM(20);
+              @include mobile {
+                width: vw(6);
+                height: vw(12);
+              }
+              path {
+                stroke: $color-black;
+                stroke-width: 3px;
+              }
+            }
+          }
+          .prev-button {
+            left: -5%;
+          }
+          .next-button {
+            right: 5%;
+            svg {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .swiper-container {
+    overflow: hidden !important;
+  }
+}

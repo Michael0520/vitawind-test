@@ -1,0 +1,968 @@
+#home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include desktop {
+    max-width: vwL(1440);
+  }
+  @include tablet {
+    max-width: vwM(768);
+  }
+  @include mobile {
+    max-width: vw(375);
+  }
+
+  .home-banner {
+    height: 100vh;
+    width: 100%;
+    background-image: url("/images/home/home_banner.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      span {
+        font-size: 60px;
+        font-weight: 700;
+        @include desktop {
+          font-size: vwL(60);
+        }
+        @include tablet {
+          font-size: vwM(60);
+        }
+        @include mobile {
+          font-size: vw(39);
+        }
+        &:first-child {
+          color: $color-white;
+        }
+        &:last-child {
+          color: $color-red;
+        }
+      }
+    }
+  }
+
+  .home-product {
+    width: 100%;
+    overflow: hidden;
+    &_wrapper {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      background-color: $color-white;
+      color: $color-black;
+      @include tablet {
+        flex-direction: column;
+      }
+      &_mask {
+        background-color: $color-red;
+        width: 1440px;
+        height: 122px;
+        position: absolute;
+        bottom: 0;
+        @include desktop {
+          width: vwL(1440);
+          height: vwL(122);
+        }
+        @include tablet {
+          width: vwM(768);
+          height: vwM(122);
+        }
+        @include mobile {
+          width: vw(375);
+          height: vw(122);
+        }
+      }
+    }
+    &_indoor-wrapper {
+      width: 42%;
+      position: relative;
+      @include tablet {
+        width: 100%;
+      }
+      &_content-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+        margin-left: 416px;
+        margin-bottom: 654px;
+        text-align: left;
+        z-index: 3;
+        @include desktop {
+          margin-top: vwL(120);
+          margin-left: vwL(416);
+          margin-bottom: vwL(654);
+        }
+        @include tablet {
+          margin-top: vwM(90);
+          margin-left: vwM(435);
+          margin-bottom: vwM(740);
+        }
+        @include mobile {
+          margin-top: vw(84);
+          margin-left: vw(209);
+          margin-bottom: vw(508);
+        }
+        &_type-text {
+          font-size: 24px;
+          font-weight: 400;
+          @include desktop {
+            font-size: vwL(24);
+          }
+          @include tablet {
+            font-size: vwM(24);
+          }
+          @include mobile {
+            font-size: vw(16);
+          }
+        }
+        &_media-text {
+          font-size: 40px;
+          font-weight: 700;
+          @include desktop {
+            font-size: vwL(40);
+          }
+          @include tablet {
+            font-size: vwM(40);
+          }
+          @include mobile {
+            font-size: vw(24);
+          }
+        }
+        &_specification-text {
+          font-size: 16px;
+          font-weight: 300;
+          text-decoration: underline;
+          cursor: pointer;
+          @include desktop {
+            font-size: vwL(16);
+          }
+          @include tablet {
+            font-size: vwM(16);
+          }
+          @include mobile {
+            font-size: vw(14);
+          }
+        }
+      }
+      &_number-text {
+        position: absolute;
+        top: 0px;
+        left: 140px;
+        font-size: 250px;
+        font-weight: 700;
+        color: $color-red;
+        opacity: 0.3;
+        font-family: sans-serif;
+        z-index: 1;
+        @include desktop {
+          left: vwL(140);
+          font-size: vwL(250);
+        }
+        @include tablet {
+          left: vwM(169);
+          top: vwM(-40);
+          font-size: vwM(230);
+        }
+        @include mobile {
+          font-size: vw(150);
+          left: vw(40);
+          top: 0;
+        }
+      }
+      &_image-wrapper {
+        &_product-image {
+          width: 389px;
+          height: 719px;
+          position: absolute;
+          bottom: -75px;
+          right: 57px;
+          z-index: 2;
+          background-image: url("/images/home/product/product-indoor.png");
+          background-position: center;
+          background-size: cover;
+          mix-blend-mode: multiply;
+          @include desktop {
+            width: vwL(389);
+            height: vwL(719);
+            bottom: vwL(-75);
+            right: vwL(57);
+          }
+          @include tablet {
+            width: vwM(395);
+            height: vwM(732);
+            bottom: vwM(-15);
+            right: 50%;
+            transform: translateX(50%);
+            background-image: url("/images/home/product/product-indoor-tablet.png");
+          }
+          @include mobile {
+            width: vw(270);
+            height: vw(500);
+            bottom: vw(-14);
+          }
+        }
+        &_icon-group {
+          width: 470px;
+          height: 268px;
+          position: absolute;
+          top: 20px;
+          right: 53px;
+          background-image: url("/images/home/product/product-indoor-icon-group.png");
+          background-position: center;
+          background-size: cover;
+          @include desktop {
+            width: vwL(470);
+            height: vwL(268);
+            top: vwL(20);
+            right: vwL(53);
+          }
+          @include tablet {
+            width: vwM(544);
+            height: vwM(341);
+            left: vwM(146);
+            top: vwM(216);
+            right: 0;
+            background-image: url("/images/home/product/product-indoor-icon-group-tablet.png");
+          }
+          @include mobile {
+            width: vw(308);
+            height: vw(225);
+            top: vw(173);
+            left: vw(49);
+            right: 0;
+            background-image: url("/images/home/product/product-indoor-icon-group-mobile.png");
+          }
+        }
+      }
+      &_popup {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 835.2px;
+        height: 950px;
+        z-index: 4;
+        background-color: $color-red;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 80px;
+
+        transition: transform 0.5s ease;
+        transform: translateX(300%);
+
+        @include desktop {
+          width: vwL(835.2);
+          height: vwL(950);
+          padding: 0 vwL(80);
+        }
+        @include tablet {
+          width: vwM(768);
+          height: vwM(962);
+          padding: 0 vwM(80);
+          transform: translateX(100%);
+        }
+        @include mobile {
+          width: vw(375);
+          height: vw(674.75);
+          padding: 0 vw(24);
+        }
+
+        &.active {
+          transform: translateX(72.5%);
+          @include desktop {
+            transform: translateX(71.5%);
+          }
+          @include tablet {
+            transform: translateX(0%);
+          }
+        }
+
+        h3 {
+          font-size: 32px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          @include desktop {
+            font-size: vwL(32);
+            margin-bottom: vwL(16);
+          }
+          @include tablet {
+            font-size: vwM(32);
+            margin-bottom: vwM(16);
+          }
+          @include mobile {
+            font-size: vw(24);
+            margin-bottom: vw(16);
+          }
+        }
+
+        ul {
+          font-size: 25px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          text-align: left;
+          @include desktop {
+            font-size: vwL(25);
+            gap: vwL(4);
+          }
+          @include tablet {
+            font-size: vwM(25);
+            gap: vwM(4);
+          }
+          @include mobile {
+            font-size: vw(16);
+            gap: vw(18);
+          }
+          li {
+            span {
+              &:first-child {
+              }
+              &:last-child {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+        &_closeBtn {
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          top: 50px;
+          right: 80px;
+          background: url("/images/home/product_popup-closeBtn.png") center
+            no-repeat;
+          background-size: cover;
+
+          @include desktop {
+            width: vwL(60);
+            height: vwL(60);
+            top: vwL(50);
+            right: vwL(80);
+          }
+          @include tablet {
+            width: vwM(85);
+            height: vwM(85);
+            top: vwM(33);
+            right: vwM(45);
+          }
+          @include mobile {
+            width: vw(50);
+            height: vw(50);
+            top: vw(26);
+            right: vw(26);
+          }
+        }
+      }
+    }
+    &_outdoor-wrapper {
+      width: 58%;
+      position: relative;
+      @include tablet {
+        width: 100%;
+      }
+      &_content-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+        margin-left: 442px;
+        margin-bottom: 654px;
+        text-align: left;
+        z-index: 3;
+        @include desktop {
+          margin-top: vwL(120);
+          margin-left: vwL(442);
+          margin-bottom: vwL(654);
+        }
+        @include tablet {
+          margin-top: vwM(106);
+          margin-left: vwM(435);
+          margin-bottom: vwM(755);
+        }
+        @include mobile {
+          margin-top: vw(77);
+          margin-left: vw(209);
+          margin-bottom: vw(508);
+        }
+        &_type-text {
+          font-size: 24px;
+          font-weight: 400;
+          @include desktop {
+            font-size: vwL(24);
+          }
+          @include tablet {
+            font-size: vwM(24);
+          }
+          @include mobile {
+            font-size: vw(16);
+          }
+        }
+        &_media-text {
+          font-size: 40px;
+          font-weight: 700;
+          @include desktop {
+            font-size: vwL(40);
+          }
+          @include tablet {
+            font-size: vwM(40);
+          }
+          @include mobile {
+            font-size: vw(24);
+          }
+        }
+        &_specification-text {
+          font-size: 16px;
+          font-weight: 300;
+          text-decoration: underline;
+          cursor: pointer;
+          @include desktop {
+            font-size: vwL(16);
+          }
+          @include tablet {
+            font-size: vwM(16);
+          }
+          @include mobile {
+            font-size: vw(14);
+          }
+        }
+      }
+      &_number-text {
+        position: absolute;
+        top: 0px;
+        left: 140px;
+        font-size: 250px;
+        font-weight: 700;
+        color: $color-red;
+        opacity: 0.3;
+        font-family: "Open Sans", sans-serif;
+        z-index: 1;
+        @include desktop {
+          left: vwL(140);
+          font-size: vwL(250);
+        }
+        @include tablet {
+          left: vwM(150);
+          top: vwM(-20);
+          font-size: vwM(230);
+        }
+        @include mobile {
+          left: vw(40);
+          font-size: vw(150);
+          top: 0;
+        }
+      }
+      &_image-wrapper {
+        &_product-image {
+          width: 915px;
+          height: 820px;
+          position: absolute;
+          bottom: -124px;
+          right: 0px;
+          z-index: 2;
+          background-image: url("/images/home/product/product-outdoor.png");
+          background-position: center;
+          background-size: contain;
+          mix-blend-mode: multiply;
+          @include desktop {
+            width: vwL(915);
+            height: vwL(820);
+            bottom: vwL(-124);
+          }
+          @include tablet {
+            width: vwM(818);
+            height: vwM(734);
+            background-image: url("/images/home/product/product-outdoor-tablet.png");
+            right: 50%;
+            bottom: 0;
+            transform: translateX(50%);
+          }
+          @include mobile {
+            background-image: url("/images/home/product/product-outdoor-mobile.png");
+            width: vw(456);
+            height: vw(409);
+            bottom: vw(58);
+          }
+        }
+        &_icon-group {
+          width: 600px;
+          height: 179px;
+          position: absolute;
+          top: 18px;
+          right: 110px;
+          background-image: url("/images/home/product/product-outdoor-icon-group.png");
+          background-position: center;
+          background-size: cover;
+          @include desktop {
+            width: vwL(600);
+            height: vwL(179);
+            top: vwL(18);
+            right: vwL(110);
+          }
+          @include tablet {
+            width: vwM(633);
+            height: vwM(466);
+            top: vwM(246);
+            right: vwM(30);
+            background-image: url("/images/home/product/product-outdoor-icon-group-tablet.png");
+          }
+          @include mobile {
+            width: vw(168);
+            height: vw(422);
+            top: vw(41);
+            right: vw(84);
+            background-image: url("/images/home/product/product-outdoor-icon-group-mobile.png");
+          }
+        }
+      }
+      &_popup {
+        position: absolute;
+        top: 0;
+        border-right-width: 0;
+        width: 604.8px;
+        // height: 894px;
+        height: 950px;
+        z-index: 4;
+        background-color: $color-red;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 80px;
+
+        transform: translateX(-200%);
+        transition: transform 0.5s ease;
+
+        @include desktop {
+          width: vwL(604.8);
+          height: vwL(950);
+        }
+        @include tablet {
+          width: vwM(768);
+          height: vwM(996);
+          padding: 0 vwM(80);
+          transform: translateX(100%);
+        }
+        @include mobile {
+          width: vw(375);
+          height: vw(668);
+          padding: 0 vw(24);
+        }
+
+        &.active {
+          transform: translateX(-100%);
+          @include tablet {
+            transform: translateX(0%);
+          }
+        }
+
+        h3 {
+          font-size: 32px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          @include desktop {
+            font-size: vwL(32);
+            margin-bottom: vwL(16);
+          }
+          @include tablet {
+            font-size: vwM(32);
+            margin-bottom: vwM(16);
+          }
+          @include mobile {
+            font-size: vw(24);
+            margin-bottom: vw(16);
+          }
+        }
+
+        ul {
+          font-size: 25px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          text-align: left;
+          @include desktop {
+            font-size: vwL(25);
+            gap: vwL(4);
+          }
+          @include tablet {
+            font-size: vwM(25);
+            gap: vwM(4);
+          }
+          @include mobile {
+            font-size: vw(16);
+            gap: vw(18);
+          }
+          li {
+            span {
+              &:first-child {
+              }
+              &:last-child {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+        &_closeBtn {
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          top: 50px;
+          left: 80px;
+          background: url("/images/home/product_popup-closeBtn.png") center
+            no-repeat;
+          background-size: cover;
+
+          @include desktop {
+            width: vwL(60);
+            height: vwL(60);
+            top: vwL(50);
+            left: vwL(80);
+          }
+          @include tablet {
+            width: vwM(85);
+            height: vwM(85);
+            top: vwM(33);
+            left: auto;
+            right: vwM(45);
+          }
+          @include mobile {
+            width: vw(50);
+            height: vw(50);
+            top: vw(26);
+            right: vw(26);
+          }
+        }
+      }
+    }
+  }
+
+  .home-video {
+    width: 100%;
+    display: flex;
+    text-align: left;
+    @include desktop {
+      display: flex;
+      text-align: left;
+    }
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+    &_content-wrapper {
+      background-color: $color-red;
+      color: $color-white;
+      width: 30.7%;
+      padding: 90px 10px 90px 80px;
+      @include desktop {
+        width: 30.7%;
+        padding: vwL(90) vwL(10) vwL(90) vwL(80);
+      }
+      @include tablet {
+        width: 100%;
+        padding: vwM(46) vwM(70);
+        order: 2;
+      }
+      @include mobile {
+        padding: vw(16) vw(28) vw(32);
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 60px;
+        margin-bottom: 24px;
+        max-width: 264px;
+        @include desktop {
+          font-size: vwL(60);
+          margin-bottom: vwL(24);
+          max-width: vwL(264);
+        }
+        @include tablet {
+          font-size: vwM(60);
+          margin-bottom: vwM(16);
+          max-width: none;
+        }
+        @include mobile {
+          font-size: vw(38);
+          margin-bottom: 0;
+        }
+      }
+      p {
+        font-weight: 300;
+        line-height: 2;
+        font-size: 25px;
+        margin-bottom: 40px;
+        letter-spacing: -1px;
+        @include desktop {
+          font-size: vwL(25);
+          margin-bottom: vwL(40);
+          letter-spacing: vwL(-1);
+        }
+        @include tablet {
+          font-size: vwM(25);
+          margin-bottom: vwM(40);
+          letter-spacing: vwM(-1);
+        }
+        @include mobile {
+          font-size: vw(16);
+          margin-bottom: vw(36);
+          letter-spacing: vw(-1);
+        }
+      }
+
+      p.desktop {
+        display: block;
+        @include desktop {
+          display: block;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+      p.tablet {
+        display: none;
+        @include desktop {
+          display: none;
+        }
+        @include tablet {
+          display: block;
+        }
+      }
+
+      button {
+        background-color: $color-black;
+        width: 224px;
+        height: 70px;
+        @include desktop {
+          width: vwL(224);
+          height: vwL(70);
+        }
+        @include tablet {
+          width: vwM(224);
+          height: vwM(70);
+        }
+        @include mobile {
+          width: vw(156);
+          height: vw(50);
+        }
+        span {
+          font-size: 20px;
+          @include desktop {
+            font-size: vwL(20);
+          }
+          @include tablet {
+            font-size: vwM(20);
+          }
+          @include mobile {
+            font-size: vw(16);
+          }
+        }
+      }
+    }
+    &_video-wrapper {
+      position: relative;
+      width: 69.3%;
+      @include desktop {
+        width: 69.3%;
+      }
+      @include tablet {
+        width: 100%;
+        order: 1;
+        height: vwM(480);
+      }
+      @include mobile {
+        height: vw(375);
+      }
+      video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      .videoBtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        @include desktop {
+          width: vwL(100);
+          height: vwL(100);
+        }
+        @include tablet {
+          width: vwM(100);
+          height: vwM(100);
+        }
+        @include mobile {
+          width: vw(40);
+          height: vw(40);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: contain;
+          object-fit: contain;
+        }
+      }
+    }
+    &_dialog-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      &_dialog {
+        // width: 100%;
+        // height: 100%;
+        margin: 0 80px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+        @include desktop {
+          margin: 0 vwL(80);
+        }
+        @include tablet {
+          margin: 0 vwM(40);
+        }
+        @include mobile {
+          margin: 0 vw(20);
+        }
+
+        &_close-button {
+          width: 78px;
+          height: 78px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: -86px;
+          right: -34px;
+          background-color: #706060;
+          border-radius: 50%;
+          @include desktop {
+            top: vwL(-86);
+            right: vwL(-34);
+            width: vwL(78);
+            height: vwL(78);
+          }
+          @include tablet {
+            top: vwM(-86);
+            right: vwM(-34);
+            width: vwM(78);
+            height: vwM(78);
+          }
+          @include mobile {
+            top: vw(-43);
+            right: vw(-17);
+            width: vw(39);
+            height: vw(39);
+          }
+          svg {
+            width: 39px;
+            height: 39px;
+            @include desktop {
+              width: vwL(39);
+              height: vwL(39);
+            }
+            @include tablet {
+              width: vwM(39);
+              height: vwM(39);
+            }
+            @include mobile {
+              width: vw(19);
+              height: vw(19);
+            }
+            -o-object-fit: cover;
+            object-fit: cover;
+            stroke: $color-white;
+            path {
+              stroke-width: 2px;
+            }
+          }
+        }
+        &_dialog-content {
+          video {
+            width: 1282px;
+            height: 592px;
+            @include desktop {
+              width: vwL(1282);
+              height: vwL(592);
+            }
+            @include tablet {
+              width: vwM(1282);
+              height: vwM(592);
+            }
+            @include mobile {
+              width: vw(641);
+              height: vw(296);
+            }
+            -o-object-fit: cover;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .whatsApp {
+    position: fixed;
+    right: 80px;
+    bottom: 72px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    cursor: pointer;
+    @include desktop {
+      right: vwL(80);
+      bottom: vwL(72);
+      width: vwL(60);
+      height: vwL(60);
+    }
+    @include tablet {
+      right: vwM(60);
+      bottom: vwM(112);
+      width: vwM(70);
+      height: vwM(70);
+    }
+    @include mobile {
+      right: vw(30);
+      bottom: vw(82);
+      width: vw(40);
+      height: vw(40);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+}

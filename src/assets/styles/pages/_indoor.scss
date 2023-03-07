@@ -1,0 +1,744 @@
+.indoor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: $color-black;
+  @include desktop {
+    max-width: vwL(1440);
+  }
+  @include tablet {
+    max-width: vwM(768);
+  }
+  @include mobile {
+    max-width: vw(375);
+  }
+  &_banner {
+    width: 100%;
+    height: 620px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: $color-black url("/images/indoor/indoor_banner.png") center
+      no-repeat;
+    background-size: cover;
+    @include desktop {
+      height: vwL(620);
+      gap: vwL(10);
+    }
+    @include tablet {
+      height: vwM(708);
+      gap: vwM(10);
+    }
+    @include mobile {
+      height: vw(424);
+      gap: vw(10);
+    }
+    h1 {
+      font-size: 32px;
+      letter-spacing: 16px;
+      color: $color-red;
+      position: relative;
+
+      @include desktop {
+        font-size: vwL(32);
+        letter-spacing: vwL(16);
+      }
+      @include tablet {
+        font-size: vwM(25);
+        letter-spacing: vwM(12.5);
+      }
+      @include mobile {
+        font-size: vw(16);
+        letter-spacing: vw(8);
+      }
+    }
+    h2 {
+      color: $color-white;
+      font-size: 60px;
+      @include desktop {
+        font-size: vwL(60);
+      }
+      @include tablet {
+        font-size: vwM(25);
+      }
+      @include mobile {
+        font-size: vw(16);
+      }
+    }
+    p {
+      color: $color-white;
+      font-size: 25px;
+      max-width: 980px;
+      margin: 0 auto;
+      font-weight: 300;
+      line-height: 2;
+      @include desktop {
+        max-width: vwL(980);
+        font-size: vwL(25);
+      }
+      @include tablet {
+        font-size: vwM(25);
+        max-width: vwM(635);
+      }
+      @include mobile {
+        font-size: vw(16);
+        max-width: vw(306);
+      }
+    }
+    hr {
+      width: 270px;
+      height: 2px;
+      background-color: $color-red;
+      @include desktop {
+        width: vwL(270);
+      }
+      @include tablet {
+        width: vwM(280);
+      }
+      @include mobile {
+        width: vw(168);
+      }
+    }
+  }
+  &_media {
+    background-color: $color-white;
+    width: 100%;
+    height: 948px;
+    position: relative;
+    @include desktop {
+      height: vwL(948);
+    }
+    @include tablet {
+      height: vwM(1150);
+    }
+    @include mobile {
+      height: vw(760);
+    }
+    &_wrapper {
+      width: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 122px;
+        bottom: 0;
+        left: 0;
+        background-color: $color-red;
+        @include desktop {
+          height: vwL(122);
+        }
+        @include tablet {
+          height: vwM(122);
+        }
+        @include mobile {
+          height: vw(122);
+        }
+      }
+      &_triangleMask {
+        width: 100%;
+        height: 100%;
+        @include tablet {
+          height: vwM(134);
+        }
+        @include mobile {
+          height: vw(65);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+      }
+      &_product {
+        mix-blend-mode: darken;
+        position: absolute;
+        bottom: 46px;
+        left: 230px;
+        width: 375px;
+        height: 707px;
+        background: url("/images/indoor/indoor_product.png") center no-repeat;
+        background-size: cover;
+        @include desktop {
+          width: vwL(375);
+          height: vwL(707);
+          bottom: vwL(46);
+          left: vwL(230);
+        }
+        @include tablet {
+          width: vwM(412);
+          height: vwM(762);
+          bottom: vwM(-20);
+          left: 50%;
+          transform: translateX(-50%);
+          background: url("/images/indoor/indoor_product-tablet.png") center
+            no-repeat;
+          background-size: cover;
+        }
+        @include mobile {
+          width: vw(270);
+          height: vw(500);
+          bottom: vw(-14);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: contain;
+          object-fit: contain;
+        }
+      }
+      &_content {
+        width: 50%;
+        height: 100%;
+        margin-left: auto;
+        margin-top: 165px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include desktop {
+          margin-top: vwL(165);
+        }
+        @include tablet {
+          width: 100%;
+          align-items: center;
+          margin-top: 0;
+        }
+        h2 {
+          font-size: 60px;
+          font-weight: 700;
+          @include desktop {
+            font-size: vwL(60);
+          }
+          @include tablet {
+            font-size: vwM(31);
+            margin-bottom: vwM(16);
+          }
+          @include mobile {
+            font-size: vw(24);
+            margin-bottom: 0;
+            line-height: vw(80);
+          }
+        }
+        ul {
+          li {
+            text-align: left;
+            font-size: 25px;
+            line-height: 2;
+            @include desktop {
+              font-size: vwL(25);
+            }
+            @include tablet {
+              font-size: vwM(25);
+              text-align: center;
+            }
+            @include mobile {
+              font-size: vw(16);
+              line-height: vw(30);
+            }
+            span {
+              &:first-child {
+                font-weight: 300;
+              }
+              &:last-child {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#indoor-converage {
+  color: $color-white;
+  background-color: $color-black;
+  width: 100%;
+  .converage_wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    @include desktop {
+      max-width: vwL(1280);
+    }
+    @include tablet {
+      max-width: vwM(650);
+    }
+    @include mobile {
+      max-width: vw(315);
+    }
+    .converage_header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      gap: 10px;
+      @include desktop {
+        margin-bottom: vwL(40);
+        gap: vwL(10);
+      }
+      @include tablet {
+        margin-bottom: vwM(44);
+        gap: vwM(10);
+      }
+      @include mobile {
+        margin-bottom: vw(24);
+        gap: vw(5);
+      }
+      h1 {
+        width: 100%;
+        font-size: 60px;
+        line-height: 1;
+        font-weight: 700;
+        margin-top: 40px;
+        @include desktop {
+          font-size: vwL(60);
+          margin-top: vwL(40);
+        }
+        @include tablet {
+          font-size: vwM(60);
+          margin: vwM(60) auto 0;
+        }
+        @include mobile {
+          font-size: vw(39);
+          margin: vw(24) auto 0;
+          letter-spacing: -2.5px;
+          // letter-spacing: vw(-2.5);
+        }
+        span:first-child {
+          // color: $color-black;
+        }
+        span:last-child {
+          color: $color-red;
+        }
+      }
+      p {
+        width: 100%;
+        font-size: 25px;
+        font-weight: 300;
+        @include desktop {
+          font-size: vwL(25);
+        }
+        @include tablet {
+          font-size: vwM(25);
+        }
+        @include mobile {
+          font-size: vw(16);
+        }
+      }
+    }
+    .converage_content {
+      margin-bottom: 48px;
+      @include desktop {
+        margin-bottom: vwL(48);
+      }
+      @include tablet {
+        // TODO:RWD
+        display: none;
+      }
+
+      .converage-indoor_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        @include desktop {
+          font-size: vwL(15);
+        }
+        .converage-indoor_card {
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: flex-start;
+          -o-object-fit: cover;
+          object-fit: cover;
+          background-position: center;
+          background-size: cover;
+          background-image: url("/images/converage/indoor/converage-type.png");
+          width: 309px;
+          height: 101px;
+          padding: 24px 20px;
+          cursor: pointer;
+          @include desktop {
+            width: vwL(309);
+            height: vwL(101);
+            padding: vwL(24) vwL(20);
+          }
+          &:nth-child(1) {
+            svg {
+              width: 36px;
+              height: 54px;
+              @include desktop {
+                width: vwL(36);
+                height: vwL(54);
+              }
+            }
+          }
+          &:nth-child(2) {
+            svg {
+              width: 41px;
+              height: 46px;
+              @include desktop {
+                width: vwL(41);
+                height: vwL(46);
+              }
+            }
+          }
+          &:nth-child(3) {
+            svg {
+              @include desktop {
+                width: vwL(56);
+                height: vwL(32);
+              }
+            }
+          }
+          &:nth-child(4) {
+            svg {
+              width: 40px;
+              height: 42px;
+              @include desktop {
+                width: vwL(40);
+                height: vwL(42);
+              }
+            }
+          }
+
+          svg {
+            margin-right: 48px;
+
+            @include desktop {
+              margin-right: vwL(48);
+            }
+            path {
+              fill: $color-black;
+            }
+          }
+
+          p {
+            display: flex;
+            flex-direction: column;
+            color: $color-gray;
+            text-align: left;
+
+            span {
+              &:first-child {
+                font-size: 24px;
+                font-weight: 700;
+                margin-left: -4px;
+                @include desktop {
+                  font-size: vwL(24);
+                  margin-left: vwL(-4);
+                }
+              }
+              &:last-child {
+                font-size: 20px;
+                font-weight: 300;
+                @include desktop {
+                  font-size: vwL(20);
+                }
+              }
+            }
+          }
+
+          &.active {
+            background-image: url("/images/converage/indoor/converage-type-active.png");
+
+            svg path {
+              fill: $color-red;
+            }
+
+            p {
+              color: $color-white;
+            }
+          }
+
+          &:nth-child(3) {
+            padding: 24px 10px;
+            @include desktop {
+              padding: vwL(24) vwL(10);
+            }
+          }
+        }
+      }
+
+      .converage-outdoor_wrapper {
+      }
+    }
+    .converage_map {
+      position: relative;
+      border: 4px solid $color-white;
+      height: 550px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include desktop {
+        height: vwL(550);
+      }
+      @include tablet {
+        height: vwM(530);
+      }
+      @include mobile {
+        height: vw(318);
+      }
+      p {
+        font-size: 60px;
+        font-weight: 700;
+        @include desktop {
+          font-size: vwL(60);
+        }
+        @include tablet {
+          font-size: vwM(60);
+        }
+        @include mobile {
+          font-size: vw(39);
+        }
+      }
+      .map-watermask {
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        text-align: left;
+        @include desktop {
+          left: vwL(12);
+        }
+        @include tablet {
+          display: none;
+        }
+        p {
+          &:first-child {
+            font-size: 20px;
+            font-weight: 400;
+            color: $color-red;
+            letter-spacing: 8px;
+            @include desktop {
+              font-size: vwL(20);
+              letter-spacing: vwL(8);
+            }
+          }
+          &:last-child {
+            font-size: 40px;
+            font-weight: 700;
+            color: $color-white;
+            @include desktop {
+              font-size: vwL(40);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#indoor-location {
+  color: $color-white;
+  background-color: $color-black;
+  padding: 40px 80px 64px;
+  @include desktop {
+    padding: vwL(40) vwL(80) vwL(64);
+  }
+  @include tablet {
+    padding: vwM(55) vwM(60) vwM(36);
+  }
+  @include mobile {
+    padding: vw(22) vw(30) vw(27);
+  }
+  .wrapper {
+    h1 {
+      font-size: 60px;
+      line-height: 1;
+      font-weight: 700;
+      margin-bottom: 16px;
+      @include desktop {
+        font-size: vwL(60);
+        margin-bottom: vwL(16);
+      }
+      @include tablet {
+        font-size: vwM(60);
+        margin-bottom: vwM(24);
+      }
+      @include mobile {
+        font-size: vw(39);
+        margin-bottom: vw(20);
+      }
+      span:first-child {
+        // color: $color-black;
+      }
+      span:last-child {
+        color: $color-red;
+      }
+    }
+    h3 {
+      text-align: center;
+      font-size: 25px;
+      max-width: 850px;
+      font-weight: 300;
+      margin: 0 auto;
+      @include desktop {
+        font-size: vwL(25);
+        max-width: vwL(850);
+      }
+      @include tablet {
+        font-size: vwM(25);
+        max-width: vwM(574);
+      }
+      @include mobile {
+        font-size: vw(16);
+        max-width: vw(314);
+      }
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0 82px;
+      @include desktop {
+        gap: 0 vwL(82);
+      }
+      @include tablet {
+        gap: 0 vwM(32);
+      }
+      @include mobile {
+        gap: 0 vw(16);
+      }
+
+      &_content {
+        width: 100%;
+        margin: 56px auto;
+        @include desktop {
+          margin: vwL(56) auto;
+        }
+        @include tablet {
+          margin: vwM(40) auto;
+        }
+        @include mobile {
+          margin: vw(24) auto;
+        }
+        .tabs_indoor-card-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          gap: 16px;
+
+          @include desktop {
+            gap: vwL(16);
+          }
+          @include tablet {
+            flex-direction: column;
+            gap: vwM(24) vwM(16);
+          }
+          @include mobile {
+            gap: vw(10);
+          }
+          .tabs_indoor-card-column {
+            display: flex;
+            gap: 16px;
+            @include desktop {
+              gap: vwL(16);
+            }
+            @include tablet {
+              gap: vwM(24) vwM(16);
+            }
+            @include mobile {
+              gap: vw(10);
+            }
+
+            .tabs_indoor-card {
+              position: relative;
+              &:hover {
+                p {
+                  opacity: 0;
+                }
+                a {
+                  opacity: 1;
+                }
+              }
+              p {
+                font-size: 32px;
+                letter-spacing: 2px;
+                font-weight: 700;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
+                @include desktop {
+                  font-size: vwL(32);
+                  letter-spacing: vwL(2);
+                }
+                @include tablet {
+                  font-size: vwM(25);
+                  letter-spacing: vwM(2);
+                }
+                @include mobile {
+                  font-size: vw(16);
+                  letter-spacing: vw(2);
+                }
+              }
+              img {
+                -o-object-fit: cover;
+                object-fit: cover;
+                width: 306px;
+                height: 504px;
+                @include desktop {
+                  width: vwL(306);
+                  height: vwL(504);
+                }
+                @include tablet {
+                  width: vwM(315);
+                  height: vwM(288);
+                }
+                @include mobile {
+                  width: vw(153);
+                  height: vw(231);
+                }
+              }
+              a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 140px;
+                height: 60px;
+                background-color: $color-red;
+                font-size: 20px;
+                font-weight: 700;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                @include desktop {
+                  width: vwL(140);
+                  height: vwL(60);
+                  font-size: vwL(20);
+                }
+                @include tablet {
+                  width: vwM(140);
+                  height: vwM(60);
+                  font-size: vwM(20);
+                }
+                @include mobile {
+                  width: vw(100);
+                  height: vw(40);
+                  font-size: vw(12);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

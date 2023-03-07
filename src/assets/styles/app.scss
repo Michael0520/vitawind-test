@@ -1,0 +1,22 @@
+// common
+@import 'common.scss';
+
+// abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// components
+@import "components/navbar";
+@import "components/partner";
+@import "components/location";
+@import "components/converage";
+@import "components/footer";
+@import "components/promotion.scss";
+
+// pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/indoor";
+@import "pages/outdoor";
+@import "pages/indoorDetail";
+@import "pages/ourdoorDetail";
